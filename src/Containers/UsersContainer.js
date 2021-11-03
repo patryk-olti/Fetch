@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import UserList from "../Components/UserList";
+
 const UsersContainer = () => {
 
     const [ userList, setUserList ] = useState([]);
@@ -12,7 +14,7 @@ const UsersContainer = () => {
  
     return(
         <div>   
-            ello
+            <UserList data={userList} />
             { console.log(userList) }
         </div>
     )
