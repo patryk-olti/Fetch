@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import UserList from "../Components/UserList";
+import UserSearch from "../Components/UserSearch";
 
 const UsersContainer = () => {
 
@@ -15,7 +16,7 @@ const UsersContainer = () => {
     return(
         <div>   
             <UserList data={userList} />
-            { console.log(userList) }
+            <UserSearch data={userList} />
         </div>
     )
 }

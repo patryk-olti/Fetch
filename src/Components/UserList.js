@@ -5,7 +5,7 @@ import User from "./User";
 const UserList = ({ data }) => {
 
     const allUsers = data.map( item => (
-        <User name={item.firstName} />
+        <User key={item.id} firstName={item.firstName} lastName={item.lastName} age={item.age}  />
     ))
 
     return(
