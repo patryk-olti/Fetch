@@ -10,7 +10,6 @@ const UsersContainer = ({ userList }) => {
     return(
         <div>   
             <UserList data={userList} />
-            <UserSearch data={userList} />
         </div>
     )
 }

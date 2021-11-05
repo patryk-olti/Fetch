@@ -1,13 +1,13 @@
 import React, { useState, useEffect }  from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import Menu from './Containers/Menu';
+import Home from './Pages/Home';
 import UsersContainer from './Containers/UsersContainer';
 import UserSearch from './Components/UserSearch';
-import Menu from './Containers/Menu';
+
 
 import './App.css';
-
-const Home = () => <div>Hello World</div>
 
 function App() {
 

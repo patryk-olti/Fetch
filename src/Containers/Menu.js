@@ -23,6 +23,7 @@ const Menu = () => {
     ]
 
     const styles = {
+        marginTop: '20px',
         marginBottom: '20px'
     }
 
