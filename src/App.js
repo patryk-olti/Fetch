@@ -5,7 +5,7 @@ import Menu from './Containers/Menu';
 import Home from './Pages/Home';
 import UsersContainer from './Containers/UsersContainer';
 import UserSearch from './Components/UserSearch';
-
+import PlumAnimation from './Pages/PlumAnimation';
 
 import './App.css';
 
@@ -27,13 +27,11 @@ function App() {
 
           <Routes>
             <Route path="/" element={ <Home />} />
-          </Routes>
-          <Routes>
             <Route path="/users" element={ <UsersContainer userList={userList} />} />
-          </Routes>
-          <Routes>
             <Route path="/userSearch" element={ <UserSearch data={userList} />} />
+            <Route path="/plumAnimation" element={<PlumAnimation />} />
           </Routes>
+
 
       </BrowserRouter>
     </div>

@@ -20,6 +20,11 @@ const Menu = () => {
             path: '/userSearch',
             content: 'userSearch'
         },
+        {
+            id: 4,
+            path: '/plumAnimation',
+            content: 'Plum'
+        }
     ]
 
     const styles = {

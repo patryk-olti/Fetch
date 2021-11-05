@@ -9,8 +9,13 @@ const HomeAnimation = () => {
 
     const tl = gsap.timeline();
 
+    const textRef = useRef();
+
     useEffect( () => {
-        tl.to(allRefs('.box'), {
+        tl.to(textRef.current ,{
+            autoAlpha: 0
+        })
+        .to(allRefs('.box'), {
             x: 100,
             stagger: 0.33,
             duration: 2,
@@ -33,6 +38,19 @@ const HomeAnimation = () => {
         })
         .to(allBoxes.current, {
             backgroundColor: 'gray'
+        })
+        .to(allRefs('.box'), {
+            backgroundColor: 'white',
+            borderColor: 'transparent'
+        })
+        .to(allRefs('.box'), {
+            scaleX: 10,
+            duration: 2
+        })
+        .to(textRef.current, {
+            autoAlpha: 1,
+            color: 'black',
+            duration: 1
         })
 
 
@@ -57,6 +75,7 @@ const HomeAnimation = () => {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
+        overflow: 'hidden',
 
         box: {
             position: 'absolute',
@@ -64,6 +83,11 @@ const HomeAnimation = () => {
             height: '100px',
             marginBottom: '50px',
             border: '2px solid black'
+        },
+        textBox: {
+            color: 'transparent',
+            fontSize: `70px`,
+            zIndex: 100
         }
     }
 
@@ -74,6 +98,8 @@ const HomeAnimation = () => {
             <div style={styles.box} className="box" > </div>
             <div style={styles.box} className="box" > </div>
             <div style={styles.box} className="box" > </div>
+
+            <div style={styles.textBox} ref={textRef} > Hello World ! </div>
 
         </div>
     )
