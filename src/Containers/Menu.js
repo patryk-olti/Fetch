@@ -24,6 +24,11 @@ const Menu = () => {
             id: 4,
             path: '/plumAnimation',
             content: 'Plum'
+        },
+        {
+            id: 5,
+            path: '/admin',
+            content: 'Administration'
         }
     ]
 

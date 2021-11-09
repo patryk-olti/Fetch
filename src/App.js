@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import UsersContainer from './Containers/UsersContainer';
 import UserSearch from './Components/UserSearch';
 import PlumAnimation from './Pages/PlumAnimation';
+import Admin from './Pages/Admin';
 
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/users" element={ <UsersContainer userList={userList} />} />
             <Route path="/userSearch" element={ <UserSearch data={userList} />} />
             <Route path="/plumAnimation" element={<PlumAnimation />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
 
 
