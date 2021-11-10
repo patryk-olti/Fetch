@@ -3,10 +3,9 @@ const API_URL = "users.json";
 function request( endpoint = "" , method = "GET", data = null ){
 
     const config = {
-        method: method,
+        method,
         headers: {
-            "Content-type": "application/json",
-            Authorizarion: "Bearer nvnvndf"
+            "Content-Type": "application/json",
         }
     };
 
@@ -14,7 +13,7 @@ function request( endpoint = "" , method = "GET", data = null ){
         config.body = JSON.stringify(data);
     }
 
-    const url = `${API_URL}${endpoint}`
+    const url = `${API_URL}${endpoint}`;
 
     return fetch( url,config ).then( response => response.json())
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const User = ({ firstName, lastName, age }) => {
+const User = ({ data }) => {
 
     const styles = {
         fontSize: '20px',
@@ -9,9 +9,7 @@ const User = ({ firstName, lastName, age }) => {
 
     return(
         <div style={styles} >
-            <span> {firstName} </span>
-            <span> {lastName} </span>
-            <span> {age} </span>
+                1
         </div>
     )
 }
