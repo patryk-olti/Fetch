@@ -1,5 +1,8 @@
 import React from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faMapMarkedAlt, faBirthdayCake, faFileSignature } from '@fortawesome/free-solid-svg-icons'
+
 import Img from "./Img";
 
 const User = ({ data }) => {
@@ -56,6 +59,12 @@ const User = ({ data }) => {
             </div>
             
             <div style={styles.text}> {firstName} {lastName} </div>
+
+            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faMapMarkedAlt} />
+            <FontAwesomeIcon icon={faBirthdayCake} />
+            <FontAwesomeIcon icon={faFileSignature} />
+
 
         {/*  
             <div> {gender} </div>
