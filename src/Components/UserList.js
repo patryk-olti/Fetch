@@ -20,31 +20,31 @@ const fetchFunction = (url, numbers, fetchStatusFunction) => {
             fetchStatusFunction(-1)
         })
     }
-
     return usersArray;
 }
+
 
 const UserList = () => {
 
     const [ users, setUsers ] = useState([])
-    const [ fetchStatus, setFetchStatus ] = useState(0); /* 0 - loading, -1 - error, 1 -   */
+    const [ fetchStatus, setFetchStatus ] = useState(0); /* 0 - loading, -1 - error, 1 - succes, 10 - disenable  */
 
     useEffect( () => {
+        
         setTimeout( () => {
             const usersList = fetchFunction(URL_API, 10, setFetchStatus);
             setUsers(usersList);
         }, 2000)
+
     },[])
-
-    const usersDOM = users.map( item => (
-        <User key={item.info.seed} data={item.results} />
-    ))
-
-
     
     return(
         <div>
             <WaitingComponent status={fetchStatus} />
+
+            { users.map( (user) => (
+                <User key={user.info.seed} data={user.results[0] } />
+            ))}
 
             <button onClick={ () => console.log(users) } > console.log </button>
         </div>
