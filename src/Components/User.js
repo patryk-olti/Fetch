@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faMapMarkedAlt, faBirthdayCake, faFileSignature } from '@fortawesome/free-solid-svg-icons'
 
 import Img from "./Img";
+import Container from '../Containers/Container';
+import Icon from "./Icon";
 
 const User = ({ data }) => {
 
@@ -24,7 +26,6 @@ const User = ({ data }) => {
         position: 'relative',
         fontSize: '20px',
         width: '500px',
-        height: '250px',
         textTransform: 'capitalize',
 
         padding: '10px 20px',
@@ -60,10 +61,13 @@ const User = ({ data }) => {
             
             <div style={styles.text}> {firstName} {lastName} </div>
 
-            <FontAwesomeIcon icon={faEnvelope} />
-            <FontAwesomeIcon icon={faMapMarkedAlt} />
-            <FontAwesomeIcon icon={faBirthdayCake} />
-            <FontAwesomeIcon icon={faFileSignature} />
+            <Container>
+                <Icon src={faEnvelope} />
+                <Icon src={faMapMarkedAlt} />
+                <Icon src={faBirthdayCake} />
+                <Icon src={faFileSignature} />
+            </Container>
+
 
 
         {/*  

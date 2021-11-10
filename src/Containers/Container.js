@@ -6,8 +6,7 @@ const Container = ({ children }) => {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        padding: '10px',
-        borderBottom: '2px solid black'
+        padding: '10px'
     }
 
     return(
